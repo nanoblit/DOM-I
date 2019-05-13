@@ -1,15 +1,42 @@
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #38acfa;
+}
+
+.digits {
+    color: white;
+    font-family: "Courier New";
+    font-weight: bold;
 }
 
 .digit {
-  display: inline-block;
-  font-size: 80px;
+    display: inline-block;
+    font-size: 80px;
 }
 
-.redDigit {
-  color: red;
+.redDigits {
+    color: red;
+}
+
+button {
+    background-color: #38acfa;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    border: 2px solid white;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+button:hover:enabled {
+    background-color: #6fc5ff;
+}
+
+button:disabled {
+    color: #dddddd;
+    border-color: #dddddd;
 }

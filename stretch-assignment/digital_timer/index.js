@@ -17,7 +17,7 @@ const runTimer = () => {
     secondTens.textContent = Math.floor((time / 1000) % 10);
 
     if (time >= 1000) {
-        document.querySelector(".digits").style.color = "red";
+        document.querySelector(".digits").classList.add("redDigits");
         startBtn.disabled = false;
         return;
     }
@@ -26,14 +26,14 @@ const runTimer = () => {
 };
 
 const resetTimer = () => {
-    document.querySelector(".digits").style.color = "black";
+    document.querySelector(".digits").classList.remove("redDigits");
     time = 0;
     msTens.textContent = "-";
     msHundreds.textContent = "-";
     secondOnes.textContent = "-";
     secondTens.textContent = "-";
     if (timeout) clearTimeout(timeout);
-}
+};
 
 startBtn.addEventListener("click", e => {
     e.target.disabled = true;

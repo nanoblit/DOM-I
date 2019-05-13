@@ -47,12 +47,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 const anchors = document.querySelectorAll("nav a");
-anchors[0].textContent = siteContent.nav["nav-item-1"];
-anchors[1].textContent = siteContent.nav["nav-item-2"];
-anchors[2].textContent = siteContent.nav["nav-item-3"];
-anchors[3].textContent = siteContent.nav["nav-item-4"];
-anchors[4].textContent = siteContent.nav["nav-item-5"];
-anchors[5].textContent = siteContent.nav["nav-item-6"];
+anchors.forEach((a, i) => (a.textContent = siteContent.nav[`nav-item-${i++}`]));
 
 const ctaH1 = document.querySelector(".cta-text h1");
 ctaH1.textContent = siteContent.cta.h1;

@@ -60,6 +60,9 @@ ctaH1.textContent = siteContent.cta.h1;
 const ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent.cta.button;
 
+const ctaImg = document.querySelector('#cta-img');
+ctaImg.src = siteContent.cta["img-src"];
+
 const topContent = document.querySelector(".top-content");
 topContent.children[0].children[0].textContent =
     siteContent["main-content"]["features-h4"];

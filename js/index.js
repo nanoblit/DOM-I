@@ -60,7 +60,7 @@ ctaH1.textContent = siteContent.cta.h1;
 const ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent.cta.button;
 
-const ctaImg = document.querySelector('#cta-img');
+const ctaImg = document.querySelector("#cta-img");
 ctaImg.src = siteContent.cta["img-src"];
 
 const topContent = document.querySelector(".top-content");
@@ -98,3 +98,15 @@ contact.children[3].textContent = siteContent["contact"]["email"];
 
 const footerParagraph = document.querySelector("footer p");
 footerParagraph.textContent = siteContent.footer.copyright;
+
+anchors.forEach(a => (a.style.color = "green"));
+
+const nav = document.querySelector("nav");
+
+const a1 = document.createElement("a");
+a1.textContent = "Home";
+const a2 = document.createElement("a");
+a2.textContent = "Forums";
+
+nav.prepend(a1);
+nav.appendChild(a2);
